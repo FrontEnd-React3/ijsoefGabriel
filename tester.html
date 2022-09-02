@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .apear {
+      color: red
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <script>
+    function verschijner() {
+      let aantalChoco;
+      let valueChoco = 5;
+      console.log("valueChoco" + valueChoco)
+      document.getElementById("aantalChoco").classList.toggle("apear");
+      if ((document.querySelector("#check1").checked) == true) {
+        valueChoco
+      } else {
+        valueChoco = 0
+      }
+      if (valueChoco !== 0) {
+        valueChoco > 1 ?
+          (aantalChoco = "bolletjes") : valueChoco == 1 ?
+          (aantalChoco = "bolletje") : aantalChoco = "bolletje"
+        document.getElementById("aantalChoco").classList.toggle("apear");
+        document.getElementById("h1").innerHTML =
+          "Je hebt " + valueChoco + " " + aantalChoco + " chocolade ijs gekozen.";
+      } else {}
+      console.log("valueChoco" + valueChoco)
+
+    }
+  </script>
+  <label for="check1" class="label" id="choco">Chocolade:</label>
+  <div onclick="verschijner()" class="checkbox" id="checkbtn1">
+    <input type="checkbox" name="chocolade" class="size" id="check1" value="chocolade" />
+  </div>
+  <h1 id="aantalChoco">&</h1>
+  <h1 id="h1">h1</h1>
+</body>
+
+</html>
